@@ -2,6 +2,7 @@
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace DefaultNamespace
@@ -137,6 +138,7 @@ namespace DefaultNamespace
         {
             Instantiate(_explosionParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            SceneManager.LoadScene("MenuScene");
         }
 
         private void OnCollisionEnter2D(Collision2D col)

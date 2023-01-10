@@ -84,6 +84,7 @@ public class MapManager : MonoBehaviour
                 {
                     TileExit exitTile = Instantiate(_tileExit, new Vector3(x, -y, 0), Quaternion.identity);
                     GameManager.Instance.TileExit = exitTile;
+                    MapTileList.Add(exitTile);
                 }
                 
                 //walls
